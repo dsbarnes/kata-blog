@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Fix the Bugs (Syntax) - My First Kata",
+    "publishdate": "2020/04/19",
+    "category": "python",
+    "video": "",
+    "content": [
+      {
+        "type": "code",
+        "head": "BigFix.py",
+        "body": "def my_first_kata(a,b):\r\n    # isinstance(a, int) and isinstance(b, int)\r\n    # does not work.\r\n    # The real question here is why.\r\n    # and the real answer is, bools are 0 and 1 at the end of the day.\r\n\r\n    if type(a) == int and type(b) == int:\r\n        return a%b + b%a\r\n    return False\r\n"
+      }
+    ]
+  }
+]

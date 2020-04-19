@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Square and Cube numbers",
+    "publishdate": "2020/03/20",
+    "category": "rust",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.rs",
+        "body": "fn main() {\r\n    let x = 5u32;\r\n\r\n    let y = {\r\n        let x_squared = x * x;\r\n        let x_cube = x_squared * x;\r\n\r\n        // This expression will be assigned to `y`\r\n        x_cube + x_squared + x\r\n    };\r\n\r\n    let z = {\r\n        // The semicolon suppresses this expression and `()` is assigned to `z`\r\n        2 * x;\r\n    };\r\n\r\n    println!(\"x is {:?}\", x);\r\n    println!(\"y is {:?}\", y);\r\n    println!(\"z is {:?}\", z);\r\n}"
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Donec maximus mollis malesuada. Proin imperdiet pulvinar augue in congue. Cras eu quam libero. Cras eros erat, facilisis vitae facilisis in, dignissim id ligula. In felis nulla, iaculis sed posuere sit amet, ornare vel lorem. Fusce metus enim, ullamcorper ut lectus vitae, lacinia convallis nisl. Etiam tincidunt pulvinar lacinia. Sed tristique accumsan rhoncus. Maecenas non purus quis enim consectetur dignissim. Vestibulum risus felis, venenatis sed dui vitae, maximus finibus orci. Duis sit amet nulla vitae turpis consectetur finibus. Vivamus venenatis vitae sapien a placerat. Aliquam mollis id justo vel iaculis."
+      }
+    ]
+  },
+  {
+    "title": "Rust Functions",
+    "publishdate": "2020/03/17",
+    "category": "rust",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Aliquam egestas interdum purus, id volutpat ipsum aliquet non. Mauris ut imperdiet tortor, et vestibulum neque. Suspendisse nec ante ac justo tincidunt gravida. Nullam eu blandit mauris. Suspendisse nec interdum nulla. Maecenas convallis magna diam, sit amet ornare metus euismod non. Praesent dolor tortor, venenatis et turpis ac, condimentum bibendum risus. Nulla in fermentum lectus. Nunc id maximus orci. Nulla dapibus ante nulla, nec porta sapien pharetra vel. Pellentesque auctor orci augue, id sodales nisi rutrum et. Donec eleifend purus nec tortor dignissim blandit. Curabitur quis erat ut ex condimentum maximus sed sed neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique interdum mi non tincidunt. Proin auctor eros eget risus fringilla, et molestie ante sagittis."
+      },
+      {
+        "type": "code",
+        "head": "solution.rs",
+        "body": "// Unlike C/C++, there's no restriction on the order of function definitions\r\nfn main() {\r\n    // We can use this function here, and define it somewhere later\r\n    fizzbuzz_to(100);\r\n}\r\n\r\n// Function that returns a boolean value\r\nfn is_divisible_by(lhs: u32, rhs: u32) -> bool {\r\n    // Corner case, early return\r\n    if rhs == 0 {\r\n        return false;\r\n    }\r\n\r\n    // This is an expression, the `return` keyword is not necessary here\r\n    lhs % rhs == 0\r\n}\r\n\r\n// Functions that \"don't\" return a value, actually return the unit type `()`\r\nfn fizzbuzz(n: u32) -> () {\r\n    if is_divisible_by(n, 15) {\r\n        println!(\"fizzbuzz\");\r\n    } else if is_divisible_by(n, 3) {\r\n        println!(\"fizz\");\r\n    } else if is_divisible_by(n, 5) {\r\n        println!(\"buzz\");\r\n    } else {\r\n        println!(\"{}\", n);\r\n    }\r\n}\r\n\r\n// When a function returns `()`, the return type can be omitted from the\r\n// signature\r\nfn fizzbuzz_to(n: u32) {\r\n    for n in 1..n + 1 {\r\n        fizzbuzz(n);\r\n    }\r\n}"
+      }
+    ]
+  }
+]

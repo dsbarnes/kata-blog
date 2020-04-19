@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CRUD Frame - Hooks",
+    "publishdate": "2020/03/18",
+    "category": "node",
+    "video": "Video",
+    "demo": "https://dsbarnes.github.io/crud-frame-hooks/",
+    "repo": "https://github.com/dsbarnes/crud-frame-hooks"
+  },
+  {
+    "title": "OAuth Google Strategy",
+    "publishdate": "2020/03/21",
+    "category": "node",
+    "video": "",
+    "demo": "",
+    "repo": "https://github.com/dsbarnes/OAuth-Demo"
+  },
+  {
+    "title": "Stripe Payment Processing",
+    "publishdate": "2020/03/19",
+    "category": "node",
+    "video": "",
+    "demo": "",
+    "repo": "https://github.com/dsbarnes/react-stripe-payment"
+  }
+]

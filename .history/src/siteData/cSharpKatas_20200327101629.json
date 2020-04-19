@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Align String with Spaces",
+    "publishdate": "2020/03/25",
+    "category": "csharp",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.cs",
+        "body": "Console.WriteLine(\"-------------------------------\");\r\nConsole.WriteLine(\"First Name | Last Name  |   Age\");\r\nConsole.WriteLine(\"-------------------------------\");\r\nConsole.WriteLine(String.Format(\"{0,-10} | {1,-10} | {2,5}\", \"Bill\", \"Gates\", 51));\r\nConsole.WriteLine(String.Format(\"{0,-10} | {1,-10} | {2,5}\", \"Edna\", \"Parker\", 114));\r\nConsole.WriteLine(String.Format(\"{0,-10} | {1,-10} | {2,5}\", \"Johnny\", \"Depp\", 44));\r\nConsole.WriteLine(\"-------------------------------\");"
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper sapien nec sem lobortis volutpat in vel turpis. Vestibulum felis ligula, varius ut elementum id, placerat vitae urna. Etiam molestie libero augue, vel congue diam sollicitudin ac. Fusce rhoncus placerat finibus. Pellentesque posuere blandit velit, vitae convallis arcu pellentesque ac. Donec aliquam, diam at dictum ornare, quam ipsum sollicitudin urna, in tincidunt turpis nulla pretium ante. Ut a libero accumsan, commodo nisi eu, euismod turpis. Nunc imperdiet urna eget ante molestie, eget aliquam ligula finibus. Morbi interdum dolor dui. Aenean fringilla, odio pulvinar varius venenatis, mauris felis sollicitudin enim, eget blandit leo urna ut erat. Quisque massa ex, cursus sit amet turpis id, efficitur feugiat lectus. Mauris rhoncus rutrum nulla, sit amet congue nibh aliquet quis."
+      }
+    ]
+  },
+  {
+    "title": "Socket Send and Receive",
+    "publishdate": "2020/03/27",
+    "category": "csharp",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "Solution.cs",
+        "body": "public static void Send(Socket socket, byte[] buffer, int offset, int size, int timeout)\r\n{\r\n  int startTickCount = Environment.TickCount;\r\n  int sent = 0;  // how many bytes is already sent\r\n  do {\r\n    if (Environment.TickCount > startTickCount + timeout)\r\n      throw new Exception(\"Timeout.\");\r\n    try {\r\n      sent += socket.Send(buffer, offset + sent, size - sent, SocketFlags.None);\r\n    }\r\n    catch (SocketException ex)\r\n    {\r\n      if (ex.SocketErrorCode == SocketError.WouldBlock ||\r\n          ex.SocketErrorCode == SocketError.IOPending ||\r\n          ex.SocketErrorCode == SocketError.NoBufferSpaceAvailable)\r\n      {\r\n        // socket buffer is probably full, wait and try again\r\n        Thread.Sleep(30);\r\n      }\r\n      else\r\n        throw ex;  // any serious error occurr\r\n    }\r\n  } while (sent < size);\r\n}"
+      },
+      {
+        "type": "text",
+        "head": "Solution:",
+        "body": "Pellentesque vel tristique nisl. Duis elementum risus vitae nunc consequat feugiat. Nulla id laoreet ligula. Praesent aliquet consectetur velit, sed congue diam bibendum sed. Curabitur dapibus neque rutrum, cursus ante at, facilisis elit. Maecenas fringilla laoreet velit, vitae dapibus lorem consectetur vel. Duis id iaculis magna. Praesent et nisl vel mi tincidunt elementum. Vivamus non erat ante. Duis auctor neque convallis, varius erat aliquam, consectetur turpis."
+      }
+    ]
+  }
+]

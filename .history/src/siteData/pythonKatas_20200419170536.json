@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Disemvowel Trolls",
+    "publishdate": "2020/04/14",
+    "category": "bash",
+    "video": "https://www.youtube.com/watch?v=ow9PWztURk8",
+    "content": [
+      {
+        "type": "code",
+        "head": "DisemvowelTrolls.sh",
+        "body": "#! /usr/local/bin/bash\r\n\r\n# The secret to this is knowing about sed\r\n# sed is \"Stream Editor\"\r\n# The most common thing we do with sed, is substitute letters\r\n# 's/ mean to substitue\r\n# Since we don't want vowels we use [aeiouAEIOU] as the letters to look for.\r\n# the []s mean a OR e OR i OR ...\r\n# When we find a match, it is replaced the with, in this case, nothing.\r\n# /g means to do this for every match we find.\r\necho $1 | sed 's/[aeiouAEIOU]//g'\r\n\r\n# Yay - it passes!\r\n"
+      },
+      {
+        "type": "text",
+        "head": "",
+        "body": ""
+      }
+    ]
+  }
+]

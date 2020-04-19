@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Align String with Spaces",
+    "publishdate": "2020/03/25",
+    "category": "csharp",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.cs",
+        "body": "Console.WriteLine(\"-------------------------------\");\r\nConsole.WriteLine(\"First Name | Last Name  |   Age\");\r\nConsole.WriteLine(\"-------------------------------\");\r\nConsole.WriteLine(String.Format(\"{0,-10} | {1,-10} | {2,5}\", \"Bill\", \"Gates\", 51));\r\nConsole.WriteLine(String.Format(\"{0,-10} | {1,-10} | {2,5}\", \"Edna\", \"Parker\", 114));\r\nConsole.WriteLine(String.Format(\"{0,-10} | {1,-10} | {2,5}\", \"Johnny\", \"Depp\", 44));\r\nConsole.WriteLine(\"-------------------------------\");"
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper sapien nec sem lobortis volutpat in vel turpis. Vestibulum felis ligula, varius ut elementum id, placerat vitae urna. Etiam molestie libero augue, vel congue diam sollicitudin ac. Fusce rhoncus placerat finibus. Pellentesque posuere blandit velit, vitae convallis arcu pellentesque ac. Donec aliquam, diam at dictum ornare, quam ipsum sollicitudin urna, in tincidunt turpis nulla pretium ante. Ut a libero accumsan, commodo nisi eu, euismod turpis. Nunc imperdiet urna eget ante molestie, eget aliquam ligula finibus. Morbi interdum dolor dui. Aenean fringilla, odio pulvinar varius venenatis, mauris felis sollicitudin enim, eget blandit leo urna ut erat. Quisque massa ex, cursus sit amet turpis id, efficitur feugiat lectus. Mauris rhoncus rutrum nulla, sit amet congue nibh aliquet quis."
+      }
+    ]
+  }
+]

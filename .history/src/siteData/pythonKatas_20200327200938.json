@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Is The Number Prime",
+    "publishdate": "2020/03/22",
+    "category": "python",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.py",
+        "body": "# Program to check if a number is prime or not\r\n\r\nnum = 407\r\n\r\n# To take input from the user\r\n#num = int(input(\"Enter a number: \"))\r\n\r\n# prime numbers are greater than 1\r\nif num > 1:\r\n   # check for factors\r\n   for i in range(2,num):\r\n       if (num % i) == 0:\r\n           print(num,\"is not a prime number\")\r\n           print(i,\"times\",num//i,\"is\",num)\r\n           break\r\n   else:\r\n       print(num,\"is a prime number\")\r\n       \r\n# if input number is less than\r\n# or equal to 1, it is not prime\r\nelse:\r\n   print(num,\"is not a prime number\")"
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in arcu at erat fringilla iaculis. Sed justo lacus, vulputate a finibus vel, blandit eget ipsum. Donec ornare tincidunt sem sed elementum. Nam ullamcorper viverra sapien, eget fermentum ante elementum eget. Aenean a diam iaculis, porttitor urna sit amet, malesuada erat. Nunc vitae arcu lacus. Phasellus scelerisque magna eget tincidunt mollis. Suspendisse tincidunt cursus justo hendrerit laoreet. Nam et orci rutrum, malesuada diam consectetur, fringilla libero. Mauris nec pellentesque ligula, feugiat condimentum dui. Donec luctus ultricies augue nec vehicula."
+      }
+    ]
+  },
+  {
+    "title": "Is The Number An Armstrong Number",
+    "publishdate": "2020/03/27",
+    "category": "python",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.py",
+        "body": "# Python program to check if the number is an Armstrong number or not\r\n\r\n# take input from the user\r\nnum = int(input(\"Enter a number: \"))\r\n\r\n# initialize sum\r\nsum = 0\r\n\r\n# find the sum of the cube of each digit\r\ntemp = num\r\nwhile temp > 0:\r\n   digit = temp % 10\r\n   sum += digit ** 3\r\n   temp //= 10\r\n\r\n# display the result\r\nif num == sum:\r\n   print(num,\"is an Armstrong number\")\r\nelse:\r\n   print(num,\"is not an Armstrong number\")"
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Proin vulputate, magna sed maximus vestibulum, tortor urna tristique urna, a eleifend eros diam vitae nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean iaculis neque est, at posuere eros tempor id. Phasellus fringilla varius mauris id laoreet. Curabitur sit amet vestibulum lorem. Proin quis diam quam. Maecenas porta augue ac dignissim porttitor. Suspendisse ac metus id nibh tristique ullamcorper. Morbi ac orci rutrum, auctor orci dapibus, cursus neque. Vivamus nibh nulla, ultricies non nisl vel, placerat placerat lectus. Suspendisse maximus fermentum ipsum, et laoreet sapien mattis eget. Mauris ut varius neque. Mauris sodales tortor ex, quis varius lorem volutpat porttitor. Aliquam varius, purus ut dictum malesuada, nisi ipsum sodales ante, a malesuada ante est sed sapien."
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Sum of differences in array",
+    "publishdate": "2020/04/19",
+    "category": "node",
+    "video": "",
+    "content": [
+      {
+        "type": "code",
+        "head": "SumOfDiff.js",
+        "body": "# This is the final refactored code:\r\ndef get_sum(a,b):\r\n    return a if a==b else sum(range(min(a,b), max(a,b)+1))\r\n\r\n\r\ndef get_sum(a, b):\r\n    # According to the puzzle,\r\n    # if ever the two elements are the same,\r\n    # just return that value\r\n    if a == b:\r\n        # We could return either a, or b, as they are the same\r\n        return a\r\n\r\n    # If the values are not the same,\r\n    else:\r\n        sm = min(a,b)\r\n        lg = max(a,b)\r\n\r\n        # Then we want the sum of the range of numbers.\r\n        # We need to +1 because the upper argument of range()\r\n        # is not inclusive.\r\n        return sum(range(sm, lg+1)\r\n\r\n"
+      }
+    ]
+  }
+]

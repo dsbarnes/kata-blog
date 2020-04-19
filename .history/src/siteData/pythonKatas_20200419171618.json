@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Fix the Bugs (Syntax) - My First Kata",
+    "publishdate": "2020/04/19",
+    "category": "python",
+    "video": "",
+    "content": [
+      {
+        "type": "code",
+        "head": "BigFix.py",
+        "body": "def my_first_kata(a,b):\r\n    # isinstance(a, int) and isinstance(b, int)\r\n    # does not work.\r\n    # The real question here is why.\r\n    # and the real answer is, bools are 0 and 1 at the end of the day.\r\n\r\n    if type(a) == int and type(b) == int:\r\n        return a%b + b%a\r\n    return False\r\n"
+      }
+    ]
+  },
+  {
+    "title": "Cyclops numbers",
+    "publishdate": "2020/04/19",
+    "category": "python",
+    "video": "",
+    "content": [
+      {
+        "type": "code",
+        "head": "Cyclops.py",
+        "body": "def cyclops(number):\r\n    # The first think we will want to do\r\n    # is convert the number to binary.\r\n    # bin() returns a string, that starts with 0b\r\n    # we can get rid of that by slicing it off.\r\n    b = bin(number)[2:]\r\n\r\n    # Once we have our binary, we could count 0s,\r\n    # however, we never need to do any logic with them,\r\n    # so let's just remove them with split()\r\n    b = b.split('0')\r\n\r\n    # Now that we have some 1s in an array,\r\n    # we want to know that there are only 2 elements,\r\n    # and that they are the same:\r\n    if len(b) == 2 and b[0] == b[1]:\r\n        return True\r\n\r\n    # And if we don't pass this test, it's not a cyclops number.\r\n    return False\r\n\r\n"
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Mumbling",
+    "publishdate": "2020/04/13",
+    "category": "bash",
+    "video": "https://www.youtube.com/watch?v=N4fdzyKLFBE&t=356s",
+    "content": [
+      {
+        "type": "code",
+        "head": " Mumbling.sh",
+        "body": "#!/bin/bash\r\naccum () {\r\n    \r\n    final=''\r\n    # We can accomplish selecting each letter with a for loop.\r\n    # The range of the loop is from 0 to the Length of the input ($1)\r\n    for((i=0; i<${#1}; i++))\r\n    do\r\n        # This will slice each letter of our input string, one at a time\r\n        letter=${1:${i}:1}\r\n\r\n        # Once we have the letter, \r\n        # pad it with the appropriate number of spaces\r\n        letterSpaced=$(printf \"%$((i+1))s\" \"$letter\")\r\n\r\n        # The spaces we just added for padding,\r\n        # replace those with the character we are currently on\r\n        letterCoppied=${letterSpaced// /$letter}\r\n\r\n        # Lowercase the whole string\r\n        letterCoppied=${letterCoppied,,}\r\n\r\n        # Uppercase the first letter, and add a '-'\r\n        final+=\"${letterCoppied^}-\"\r\n    done\r\n    # Because we added a '-' to ever section,\r\n    # we will have an extra '-' on the end,\r\n    # slice it off\r\n    echo ${final:0:-1}\r\n}\r\n\r\n# Be sure to call your function with the appropriate input!\r\naccum \"$1\"\r\n"
+      }
+    ]
+  },
+  {
+    "title": "Disemvowel Trolls",
+    "publishdate": "2020/04/14",
+    "category": "bash",
+    "video": "https://www.youtube.com/watch?v=ow9PWztURk8",
+    "content": [
+      {
+        "type": "code",
+        "head": "DisemvowelTrolls.sh",
+        "body": "#! /usr/local/bin/bash\r\n\r\n# The secret to this is knowing about sed\r\n# sed is \"Stream Editor\"\r\n# The most common thing we do with sed, is substitute letters\r\n# 's/ mean to substitue\r\n# Since we don't want vowels we use [aeiouAEIOU] as the letters to look for.\r\n# the []s mean a OR e OR i OR ...\r\n# When we find a match, it is replaced the with, in this case, nothing.\r\n# /g means to do this for every match we find.\r\necho $1 | sed 's/[aeiouAEIOU]//g'\r\n\r\n# Yay - it passes!\r\n"
+      }
+    ]
+  }
+]

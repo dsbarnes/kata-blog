@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Pass Return Value from Function",
+    "publishdate": "2020/03/10",
+    "category": "bash",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.sh",
+        "body": "#!/bin/bash\r\nfunction greeting() {\r\n\r\nstr=\"Hello, $name\"\r\necho $str\r\n\r\n}\r\n\r\necho \"Enter your name\"\r\nread name\r\n\r\nval=$(greeting)\r\necho \"Return value of the function is $val\""
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Aenean ac velit eget elit maximus viverra. Nullam vitae pellentesque turpis. Quisque consequat vulputate justo. Aenean tristique eu dui sit amet laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut id vehicula lectus, vitae sodales mauris. Aliquam non massa in turpis iaculis pharetra. Etiam faucibus arcu et iaculis condimentum. Morbi vel risus laoreet, blandit magna at, interdum nunc. Sed eu nunc lacinia, varius ligula tincidunt, euismod purus. Vestibulum nec elementum velit. Nam ac maximus ex. In iaculis pharetra urna. Vivamus lacinia tortor orci, quis finibus tellus interdum bibendum."
+      }
+    ]
+  },
+  {
+    "title": "Get Parse Current Date",
+    "publishdate": "2020/03/17",
+    "category": "bash",
+    "video": "Video Link",
+    "content": [
+      {
+        "type": "code",
+        "head": "solution.sh",
+        "body": "#!/bin/bash\r\nYear=`date +%Y`\r\nMonth=`date +%m`\r\nDay=`date +%d`\r\nHour=`date +%H`\r\nMinute=`date +%M`\r\nSecond=`date +%S`\r\necho `date`\r\necho \"Current Date is: $Day-$Month-$Year\"\r\necho \"Current Time is: $Hour:$Minute:$Second\""
+      },
+      {
+        "type": "text",
+        "head": "Solution",
+        "body": "Proin ac lectus eget eros egestas aliquam in ut arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque mi nibh, iaculis sit amet ex sed, eleifend lacinia lacus. Morbi luctus eget ligula quis blandit. Cras ac eleifend nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ac mi venenatis, laoreet urna vel, laoreet dui. Pellentesque posuere hendrerit eros, et accumsan est iaculis tristique. Vivamus congue non mi nec sagittis. Curabitur molestie id justo in sagittis. Maecenas risus sapien, feugiat et velit nec, euismod tempus mi. Fusce vel condimentum lorem, non mollis magna."
+      }
+    ]
+  }
+]
