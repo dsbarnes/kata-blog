@@ -80,13 +80,15 @@ function KataWriteup({ katas, getImgSrc }) {
 
             <hr />
 
-            <YouTube
-              id={'YTvideo'}
-              containerClassName={'YTcont'}
-              videoId={el.video} />
+            {el.video &&
+              <YouTube
+                id={'YTvideo'}
+                containerClassName={'YTcont'}
+                videoId={el.video} />
+            }
+
 
             <hr />
-
             {codeContent.map(content => {
               return (
                 <React.Fragment key={Math.random() * 10000}>
