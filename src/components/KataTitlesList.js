@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import SmTitleList from './sub/sm-TitlesList'
+import LgTitleList from './sub/lg-TitlesList'
+
 import Media from 'react-media'
 import { Container, Row, Col } from 'react-bootstrap'
 import {
@@ -46,9 +50,6 @@ function KataTitleList({ katas, getImgSrc }) {
                 return dateB - dateA
               })
               .map(el => {
-                const urlTitle = el.title
-                  .split(' ').join('').replace('#', 'sharp')
-
                 return (
                   <Row key={Math.random() * 10000} className='m-3'>
                     <Media queries={{
@@ -58,58 +59,12 @@ function KataTitleList({ katas, getImgSrc }) {
                       {matches => (
                         <React.Fragment>
                           {matches.small &&
-                            <React.Fragment>
-                              <Col xs={2}>
-                                <img
-                                  style={{
-                                    'height': '2rem',
-                                    'width': '2rem',
-                                    'position': 'relative',
-                                    'top': '10px',
-                                    'right': '5px'
-                                  }}
-                                  alt={`${el.category} icon`}
-                                  src={getImgSrc(el.category)} />
-                              </Col>
-
-                              <Col>
-                                <Row className='articleListFontSize'>
-                                  <Link
-                                    to={url === '/' ?
-                                      `${el.category}/${urlTitle}` :
-                                      `${url}/${urlTitle}`
-                                    }
-                                  >{el.title}
-                                  </Link>
-                                </Row>
-                                <Row className='articleListFontSize date'>{el.publishdate}</Row>
-                              </Col>
-                            </React.Fragment>
+                            <SmTitleList el={el} getImgSrc={getImgSrc} />
                           }
 
                           {matches.large &&
-                            <React.Fragment key={Math.random() * 10000}>
-                              <Col sm={2}>
-                                <img
-                                  style={{ 'height': '2rem', 'width': '2rem' }}
-                                  alt={`${el.category} icon`}
-                                  src={getImgSrc(el.category)} />
-                              </Col>
-
-                              <Col className='articleListFontSize date' sm={3}>{el.publishdate}</Col>
-
-                              <Col className='articleListFontSize'>
-                                <Link
-                                  to={url === '/' ?
-                                    `${el.category}/${urlTitle}` :
-                                    `${url}/${urlTitle}`
-                                  }
-                                >{el.title}
-                                </Link>
-                              </Col>
-                            </React.Fragment>
+                            <LgTitleList el={el} getImgSrc={getImgSrc} />
                           }
-
                         </React.Fragment>
                       )}
                     </Media>
