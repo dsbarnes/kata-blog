@@ -61,8 +61,7 @@ function App() {
             <Nav.Link href="/csharp">C#</Nav.Link>
             <Nav.Link href="/rust">Rust</Nav.Link>
             <Nav.Link href="/bash">Bash</Nav.Link>
-            <Nav.Link href="/security">Security</Nav.Link>
-            <Nav.Link href="/projects">Projects</Nav.Link>
+            <Nav.Link href="/assignments">Work Assignments</Nav.Link>
           </Nav>
         </Navbar>
       </Container>
@@ -107,13 +106,7 @@ function App() {
               katas={allKatas} />
           </Route>
 
-          <Route path='/security'>
-            <KataTitlesList
-              getImgSrc={getImgSrc}
-              katas={allKatas} />
-          </Route>
-
-          <Route path='/projects'>
+          <Route path='/assignments'>
             <Projects
               getImgSrc={getImgSrc}
               projects={projects}

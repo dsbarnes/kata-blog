@@ -3,9 +3,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 div h3{ font-size: 20px;}
+
 .brandColor{ color: #7851a9;}
+
 .navFontSize{ font-size: 18px; }
+
 .articleListFontSize{ font-size: 18px; }
+
 div a{ color: black;}
+
 div a:hover{ color: #7851a9;}
+
 .date{ color: gray;}
+
+.YTcont{ text-align: center; }

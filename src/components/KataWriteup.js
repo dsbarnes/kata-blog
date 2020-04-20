@@ -5,6 +5,7 @@ import { Row, Col } from 'react-bootstrap'
 import { useParams } from "react-router-dom"
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import YouTube from 'react-youtube'
 
 function KataWriteup({ katas, getImgSrc }) {
 
@@ -78,7 +79,12 @@ function KataWriteup({ katas, getImgSrc }) {
             </Row>
 
             <hr />
-            <p>{el.video}</p>
+
+            <YouTube
+              id={'YTvideo'}
+              containerClassName={'YTcont'}
+              videoId={el.video} />
+
             <hr />
 
             {codeContent.map(content => {
