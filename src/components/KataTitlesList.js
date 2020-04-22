@@ -5,11 +5,10 @@ import SmTitleList from './sub/sm-TitlesList'
 import LgTitleList from './sub/lg-TitlesList'
 
 import Media from 'react-media'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import {
   Switch,
   Route,
-  Link,
   useRouteMatch,
 } from "react-router-dom"
 import KataWriteup from './KataWriteup'

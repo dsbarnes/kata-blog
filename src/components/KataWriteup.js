@@ -86,9 +86,8 @@ function KataWriteup({ katas, getImgSrc }) {
                 containerClassName={'YTcont'}
                 videoId={el.video} />
             }
-
-
             <hr />
+
             {codeContent.map(content => {
               return (
                 <React.Fragment key={Math.random() * 10000}>
@@ -107,8 +106,7 @@ function KataWriteup({ katas, getImgSrc }) {
                   </SyntaxHighlighter>
                 </React.Fragment>
               )
-            })
-            }
+            })}
 
             {textContent.map(content => {
               return (
@@ -117,8 +115,7 @@ function KataWriteup({ katas, getImgSrc }) {
                   <p className='mb-5'>{content.body}</p>
                 </React.Fragment>
               )
-            })
-            }
+            })}
           </React.Fragment>
         )
       })}
