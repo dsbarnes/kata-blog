@@ -80,11 +80,12 @@ function KataWriteup({ katas, getImgSrc }) {
 
             <hr />
 
-            <YouTube
-              id={'YTvideo'}
-              containerClassName={'YTcont'}
-              videoId={el.video} />
-
+            {el.video &&
+              <YouTube
+                id={'YTvideo'}
+                containerClassName={'YTcont'}
+                videoId={el.video} />
+            }
             <hr />
 
             {codeContent.map(content => {
@@ -105,8 +106,7 @@ function KataWriteup({ katas, getImgSrc }) {
                   </SyntaxHighlighter>
                 </React.Fragment>
               )
-            })
-            }
+            })}
 
             {textContent.map(content => {
               return (
@@ -115,8 +115,7 @@ function KataWriteup({ katas, getImgSrc }) {
                   <p className='mb-5'>{content.body}</p>
                 </React.Fragment>
               )
-            })
-            }
+            })}
           </React.Fragment>
         )
       })}
