@@ -12,6 +12,7 @@ import {
   useRouteMatch,
 } from "react-router-dom"
 import KataWriteup from './KataWriteup'
+import handleSortByDate from '../helpers'
 
 function KataTitleList({ katas, getImgSrc }) {
 
@@ -38,16 +39,7 @@ function KataTitleList({ katas, getImgSrc }) {
 
           <Container className='mt-4 mb-2'>
             {category && category
-              .sort((elA, elB) => {
-                // elA elB === Element A or B
-                // ymdA ymdB === Year Month Day of A or B
-                const ymdA = elA.publishdate.split('/')
-                const ymdB = elB.publishdate.split('/')
-                const dateA = new Date(`${ymdA[0]}-${ymdA[1]}-${ymdA[2]}`)
-                const dateB = new Date(`${ymdB[0]}-${ymdB[1]}-${ymdB[2]}`)
-                // newest to oldest
-                return dateB - dateA
-              })
+              .sort((a, b) => handleSortByDate(a, b))
               .map(el => {
                 return (
                   <Row key={Math.random() * 10000} className='m-3'>

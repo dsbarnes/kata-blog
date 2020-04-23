@@ -5,6 +5,7 @@ import LgHomeProjects from './sub/lg-HomeProjects';
 import SmHomeProjects from './sub/sm-HomeProjects';
 import LgHomeKatas from './sub/lg-HomeKatas';
 import SmHomeKatas from './sub/sm-HomeKatas';
+import handleSortByDate from '../helpers'
 
 
 function Home({ katas, getImgSrc, projects }) {
@@ -29,16 +30,7 @@ function Home({ katas, getImgSrc, projects }) {
           <React.Fragment>
             <Col>
               {katas
-                .sort((elA, elB) => {
-                  // elA elB === Element A or B
-                  // ymdA ymdB === Year Month Day of A or B
-                  const ymdA = elA.publishdate.split('/')
-                  const ymdB = elB.publishdate.split('/')
-                  const dateA = new Date(`${ymdA[0]}-${ymdA[1]}-${ymdA[2]}`)
-                  const dateB = new Date(`${ymdB[0]}-${ymdB[1]}-${ymdB[2]}`)
-                  // newest to oldest
-                  return dateB - dateA
-                })
+                .sort((a, b) => handleSortByDate(a, b))
                 .map(el => {
                   return (
                     <React.Fragment>
@@ -61,16 +53,7 @@ function Home({ katas, getImgSrc, projects }) {
 
             <Col>
               {projects
-                .sort((elA, elB) => {
-                  // elA elB === Element A or B
-                  // ymdA ymdB === Year Month Day of A or B
-                  const ymdA = elA.publishdate.split('/')
-                  const ymdB = elB.publishdate.split('/')
-                  const dateA = new Date(`${ymdA[0]}-${ymdA[1]}-${ymdA[2]}`)
-                  const dateB = new Date(`${ymdB[0]}-${ymdB[1]}-${ymdB[2]}`)
-                  // newest to oldest
-                  return dateB - dateA
-                })
+                .sort((a, b) => handleSortByDate(a, b))
                 .map(project => {
                   return (
                     <React.Fragment>
