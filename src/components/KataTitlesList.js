@@ -57,13 +57,8 @@ function KataTitleList({ katas, getImgSrc }) {
                     }}>
                       {matches => (
                         <React.Fragment>
-                          {matches.small &&
-                            <SmTitleList el={el} getImgSrc={getImgSrc} />
-                          }
-
-                          {matches.large &&
-                            <LgTitleList el={el} getImgSrc={getImgSrc} />
-                          }
+                          {matches.small && <SmTitleList el={el} getImgSrc={getImgSrc} />}
+                          {matches.large && <LgTitleList el={el} getImgSrc={getImgSrc} />}
                         </React.Fragment>
                       )}
                     </Media>
