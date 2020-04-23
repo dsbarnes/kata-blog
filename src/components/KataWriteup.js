@@ -7,6 +7,9 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import YouTube from 'react-youtube'
 
+import SmWriteup from './sub/sm-Writeup'
+import LgWriteup from './sub/lg-Writeup'
+
 function KataWriteup({ katas, getImgSrc }) {
 
   const { title } = useParams()
@@ -37,41 +40,11 @@ function KataWriteup({ katas, getImgSrc }) {
                 {matches => (
                   <React.Fragment>
                     {matches.small &&
-                      <React.Fragment>
-                        <Col xs={2}>
-                          <img
-                            style={{
-                              'height': '2rem',
-                              'width': '2rem',
-                              'position': 'relative',
-                              'top': '10px'
-                            }}
-                            alt={`${el.category} icon`}
-                            src={getImgSrc(el.category)} />
-                        </Col>
-
-                        <Col>
-                          <Row className='articleListFontSize'>
-                            <Col>{el.title}</Col>
-                          </Row>
-                          <Row className='articleListFontSize date'>
-                            <Col>{el.publishdate}</Col>
-                          </Row>
-                        </Col>
-                      </React.Fragment>
+                      <SmWriteup el={el} getImgSrc={getImgSrc} />
                     }
 
                     {matches.large &&
-                      <React.Fragment>
-                        <Col sm={1}>
-                          <img
-                            style={{ 'height': '2rem', 'width': '2rem' }}
-                            alt={`${el.category} icon`}
-                            src={getImgSrc(el.category)} />
-                        </Col>
-                        <Col xs={2} className='date'>{el.publishdate}</Col>
-                        <Col>{el.title}</Col>
-                      </React.Fragment>
+                      <LgWriteup el={el} getImgSrc={getImgSrc} />
                     }
                   </React.Fragment>
                 )}
